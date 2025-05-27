@@ -2,15 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-# Sample DataFrame
-# data = {
-    # "Name": ["Alice", "Bob", "Charlie", "David", "Eve"],
-    # "Age": [25, 30, 35, 40, 45],
-    # "Score": [85, 90, 95, 80, 75],
-    # "City": ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"]
-# }
-
-# df = pd.DataFrame(data)
 df = pd.read_csv("cholesterol level.csv")
 
 # Title
