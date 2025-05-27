@@ -23,13 +23,14 @@ st.write(df.describe())  # Display summary statistics
 
 # Filter Functionality
 st.subheader("Filter Data")
+
 # Filter by Age
 age_filter = st.slider("Select Age Range", min_value=int(df["Age"].min()), max_value=int(df["Age"].max()), value=(50, 66))
 filtered_df = df[(df["Age"] >= age_filter[0]) & (df["Age"] <= age_filter[1])]
 
-# Filter by City
-city_filter = st.multiselect("Select Cities", options=df["City"].unique(), default=df["City"].unique())
-filtered_df = filtered_df[filtered_df["City"].isin(city_filter)]
+# Filter by Cholesterol
+choles_filter = st.multiselect("Select Cholesterol", options=df["Total Cholesterol (mg/dL)"].unique(), default=df["Total Cholesterol (mg/dL)"].unique())
+filtered_df = filtered_df[filtered_df["Total Cholesterol (mg/dL)"].isin(choles_filter)]
 
 # Display Filtered Data
 st.write("Filtered Data:")
